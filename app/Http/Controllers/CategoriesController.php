@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Cqtegories;
+use App\Categories;
 use Illuminate\Http\Request;
 
-class CqtegoriesController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,10 @@ class CqtegoriesController extends Controller
      */
     public function index()
     {
-        $categories=Cqtegories::all();
+        $categories=Categories::all();
+        // foreach($categories as $categorie){
+        //     $categorie->setAttribute('produits' ,$categorie->produits->name);
+        // }
         return response()->json([
            'categories'=> $categories]
         );

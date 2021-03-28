@@ -49,6 +49,7 @@ class ProduitsController extends Controller
              'name'=>$request->name,
              'category_id'=>$request->category_id,
              
+             
             
             
             

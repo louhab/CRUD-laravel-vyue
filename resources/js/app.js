@@ -10,6 +10,7 @@ window.User=User;
 import Produit from './components/Produit.vue';
 import Home from './components/Home.vue';
 
+
 Vue.component('incription', require('./components/Inscrption.vue').default);
 Vue.component('coonexion', require('./components/Login.vue').default);
 Vue.component('Home', require('./components/Home.vue').default);
@@ -17,7 +18,8 @@ Vue.component('produit', require('./components/Produit.vue').default);
 Vue.component('add-produit', require('./components/Addproduit.vue').default);
 Vue.component('edit-produit', require('./components/EditProdit.vue').default);
 Vue.component('pagination', require('laravel-vue-pagination'));
-
+Vue.component('categories', require('./components/Categories.vue').default);
+Vue.component('table-categories', require('./components/Tablecategory.vue').default);
 window.Vue = require('vue').default;
 import Vue from 'vue';
 import VueRouter from 'vue-router' ;
@@ -35,7 +37,8 @@ const routes =[
         path : '/home', 
         component  :Home  ,
         name : 'Home'
-    }
+    },
+   
     
 ];
 const router = new VueRouter({

@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Cqtegories;
+use App\Categories;
 
 class Produits extends Model
 {
@@ -11,6 +11,6 @@ class Produits extends Model
         'name','category_id'
     ];
     public function category(){
-        return $this->belongsTo(Cqtegories::class);
+        return $this->belongsTo(Categories::class);
     }
 }

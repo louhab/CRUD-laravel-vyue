@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProduitsControlle;
 
-use App\Http\Controllers\CqtegoriesController;
+use App\Http\Controllers\CategoriesController;
 
 
 
@@ -22,7 +22,7 @@ Route::delete('produits/delete/{id}','ProduitsController@destroy');
 Route::post('/produits/add','ProduitsController@store');
 
 
-Route::get('/categories','CqtegoriesController@index');
+Route::get('/categories','CategoriesController@index');
 Route::patch('/produit/update/{id}','ProduitsController@update');
 
 

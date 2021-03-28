@@ -44,7 +44,8 @@ export default {
         return {
             categories : {},
             category :"",
-            name:""
+            name:"",
+            categories_id:""
         }
     },
     created(){
@@ -59,7 +60,8 @@ export default {
         addproduct(){
             axios.post('/api/produits/add',{
                name:this.name,
-               category_id:this.category 
+               category_id:this.category,
+               categories_id:this.category
             }).then(response=>{
               this.$router.go();
               $('#addproduct').modal('hide');

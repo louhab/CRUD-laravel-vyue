@@ -13,9 +13,11 @@ class CreateCqtegoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cqtegories', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
+
             $table->string('name');
+          
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateCqtegoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cqtegories');
+        Schema::dropIfExists('categories');
     }
 }

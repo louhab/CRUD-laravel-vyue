@@ -1,18 +1,23 @@
 <template>
 
     <div class="container mt-4">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addproduct">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addproduct">
   Ajouter un produit
 </button>
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categories">
+  les categories 
+</button> -->
 <button class="btn btn-primary" @click="logout()">Deconnexion</button>
 
         <div class="row justify-content-center">
             <add-produit></add-produit>
+            <!-- <table-categories></table-categories> -->
            <edit-produit v-bind:produit="produit"></edit-produit>
             <div class="col-md-12">
            
                 <div v-if="loading">Chargement...</div>
                 <div class="card mt-3" v-else>
+                    <h2 class="text-center">les produits</h2>
                     <table class="table ">
                             <thead>
                                 <tr>
@@ -50,6 +55,8 @@
                      
                             
                             </table>
+
+
                                
      
         
@@ -74,6 +81,7 @@
                 loading: true,
                 produit : {},
                
+               
             }
         },
         mounted() {
@@ -88,7 +96,9 @@
              (this.produits=response.data.produits) 
             )
             .catch(error=>console.log(error))
-            .finally(() => this.loading = false)
+            .finally(() => this.loading = false);
+
+           
 
             
             
